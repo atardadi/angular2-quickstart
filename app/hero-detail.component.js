@@ -19,11 +19,14 @@ System.register(['angular2/core'], function(exports_1) {
             HeroDetailComponent = (function () {
                 function HeroDetailComponent() {
                 }
+                HeroDetailComponent.prototype.onClick = function (event) {
+                    this.hero.name = event.target.value;
+                };
                 HeroDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'my-hero-detail',
                         inputs: ['hero'],
-                        template: "\n\t\t<div *ngIf=\"hero\">\n\t\t\t<h2>{{hero.name}} Details!</h2>\n\t\t\t<div><label>id:</label>{{hero.id}}</div>\n\t\t\t<div>\n\t\t\t\t<label>Name:</label>\n\t\t\t\t<input placeholder=\"name\" [(ngModel)]=\"hero.name\" />\n\t\t\t</div>\n\t\t</div>\n\t"
+                        template: "\n\t\t<div *ngIf=\"hero\">\n\t\t\t<h2>{{hero.name}} Details!</h2>\n\t\t\t<div><label>id:</label>{{hero.id}}</div>\n\t\t\t<div>\n\t\t\t\t<label>Name:</label>\n\t\t\t\t<input placeholder=\"name\" />\n\t\t\t\t<button (click)=onClick($event)>Click Me!</button>\n\t\t\t</div>\n\t\t</div>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HeroDetailComponent);

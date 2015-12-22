@@ -10,7 +10,8 @@ import {Component} from 'angular2/core';
 			<div><label>id:</label>{{hero.id}}</div>
 			<div>
 				<label>Name:</label>
-				<input placeholder="name" [(ngModel)]="hero.name" />
+				<input placeholder="name" />
+				<button (click)=onClick($event)>Click Me!</button>
 			</div>
 		</div>
 	`
@@ -18,4 +19,8 @@ import {Component} from 'angular2/core';
 
 export class HeroDetailComponent{
 	public hero: Hero;
+
+	onClick(event: any) {
+		this.hero.name = event.target.value;
+	}
 }
