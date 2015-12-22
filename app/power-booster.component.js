@@ -1,4 +1,4 @@
-System.register(['angular2/core', './hero-async-message.component'], function(exports_1) {
+System.register(['angular2/core', './exponential-strength.pipe'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,32 +8,32 @@ System.register(['angular2/core', './hero-async-message.component'], function(ex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_async_message_component_1;
-    var AppComponent;
+    var core_1, exponential_strength_pipe_1;
+    var PowerBooster;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (hero_async_message_component_1_1) {
-                hero_async_message_component_1 = hero_async_message_component_1_1;
+            function (exponential_strength_pipe_1_1) {
+                exponential_strength_pipe_1 = exponential_strength_pipe_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            PowerBooster = (function () {
+                function PowerBooster() {
                 }
-                AppComponent = __decorate([
+                PowerBooster = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: "<hero-message></hero-message>",
-                        directives: [hero_async_message_component_1.HeroAsyncMessageComponent]
+                        selector: 'power-booster',
+                        template: "\n\t\t<h2>Power Booster</h2>\n\t \t<p>\n\t\t\tSuper Power Booster: {{2 | exponentialStrength: 10}}\n\t\t</p>\n\t",
+                        pipes: [exponential_strength_pipe_1.ExponentialStrengthPipe]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], PowerBooster);
+                return PowerBooster;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("PowerBooster", PowerBooster);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=power-booster.component.js.map

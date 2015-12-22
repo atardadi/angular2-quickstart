@@ -1,10 +1,11 @@
 import {Component} from 'angular2/core';
-import {HeroFormComponent} from './hero-form.component';
+import {HeroAsyncMessageComponent} from './hero-async-message.component';
+
 
 @Component({
   selector: 'my-app',
-  template: `<hero-form></hero-form>`,
-  directives: [HeroFormComponent]
+  template: `<hero-message></hero-message>`,
+  directives: [HeroAsyncMessageComponent]
 })
 
 export class AppComponent {
