@@ -13,7 +13,7 @@ export class HeroFormComponent{
 
 	submitted = false;
 
-	onsubmit() { this.submitted = true;}
+	onSubmit() { this.submitted = true;}
 
 	//TODO
 	get diagnostic() { return JSON.stringify(this.model) };

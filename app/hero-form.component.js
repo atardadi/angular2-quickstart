@@ -25,7 +25,7 @@ System.register(['angular2/core', './hero'], function(exports_1) {
                     this.model = new hero_1.Hero(18, 'Dr No!', this.powers[0], 'Chuck Overstreet');
                     this.submitted = false;
                 }
-                HeroFormComponent.prototype.onsubmit = function () { this.submitted = true; };
+                HeroFormComponent.prototype.onSubmit = function () { this.submitted = true; };
                 Object.defineProperty(HeroFormComponent.prototype, "diagnostic", {
                     //TODO
                     get: function () { return JSON.stringify(this.model); },
